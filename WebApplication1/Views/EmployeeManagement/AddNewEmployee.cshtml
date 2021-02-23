@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.EmployeeViewModel
+
+@using (Html.BeginForm("AddNewEmployee", "EmployeeManagement", FormMethod.Post))
+{ }
+<h1>Add New Employee</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddNewEmployee">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EmpName" class="control-label"></label>
+                <input asp-for="EmpName" class="form-control" />
+                <span asp-validation-for="EmpName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FathName" class="control-label"></label>
+                <input asp-for="FathName" class="form-control" />
+                <span asp-validation-for="FathName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JDate" class="control-label"></label>
+                <input asp-for="JDate" class="form-control" type="date" />
+                <span asp-validation-for="JDate" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label asp-for="SelectedDesignation"></label>
+
+                        <select asp-for="SelectedDesignation" asp-items="Model.DesignationList" class="form-control">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label asp-for="SelectedDepartment"></label>
+
+                        <select asp-for="SelectedDepartment" asp-items="Model.DepartmentList" class="form-control">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\anser\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\anser\\.nuget\\packages"
+    ]
+  }
+}
